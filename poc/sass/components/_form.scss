@@ -1,0 +1,65 @@
+.form {
+
+    &__item {
+        position: absolute;
+        z-index: 2;
+        background-color: rgba($color: lightblue, $alpha:.6);
+
+        &:hover {
+           cursor: pointer;
+        }
+
+        &--text {
+            min-width: 1rem;
+        }
+
+        &--checkbox {
+            border: none !important;
+            outline: none !important;
+        }
+
+        &--signature {
+            min-width: 12rem;
+            min-height: 2.4rem;
+        }
+    }
+
+    &__aside {
+        position: absolute;
+        top: 25vh;
+        z-index: 3;
+    }
+
+    &__selectors {
+        div {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__selector-btn {
+        border-radius: .75rem;
+        background-color: white;
+        border: none;
+        box-shadow: 1px 2px 4px grey;
+        transition: .25s all;
+
+        &:link,
+        &:visited {
+            transform: translateY(0rem);
+        }
+
+        &:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 2px 4px 8px grey;
+        }
+
+        &::after {
+            transform: translateY(-0.5rem);
+            box-shadow: 2px 4px 8px grey;
+        }
+           
+        img {
+            padding: 1.2rem;
+        }
+    }
+}

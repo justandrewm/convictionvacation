@@ -5,6 +5,7 @@
     "private": true,
     "dependencies": {
         "moment": "^2.24.0",
+        "node-sass": "^4.13.1",
         "react": "^16.9.0",
         "react-dom": "^16.9.0",
         "react-ga": "^2.7.0",
@@ -15,7 +16,8 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "deploy": "gh-pages -d build"
+        "deploy": "gh-pages -d build",
+        "compile:sass": "node-sass poc/sass/main.scss poc/css/main.css -w"
     },
     "eslintConfig": {
         "extends": "react-app"

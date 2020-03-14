@@ -1,0 +1,134 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  max-width: 100%;
+  overflow-x: hidden; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 0; }
+
+@media print {
+  .carousel-indicators {
+    display: none; }
+  aside {
+    display: none; }
+  .carousel-item {
+    display: block !important;
+    /* display all slides for print media */
+    page-break-after: always !important; }
+  .form__item {
+    background-color: transparent !important; } }
+
+body {
+  font-size: 1.6rem; }
+
+.form__item {
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(173, 216, 230, 0.6); }
+  .form__item:hover {
+    cursor: pointer; }
+  .form__item--text {
+    min-width: 1rem; }
+  .form__item--checkbox {
+    border: none !important;
+    outline: none !important; }
+  .form__item--signature {
+    min-width: 12rem;
+    min-height: 2.4rem; }
+
+.form__aside {
+  position: absolute;
+  top: 25vh;
+  z-index: 3; }
+
+.form__selectors div {
+  margin-bottom: 2rem; }
+
+.form__selector-btn {
+  border-radius: .75rem;
+  background-color: white;
+  border: none;
+  box-shadow: 1px 2px 4px grey;
+  transition: .25s all; }
+  .form__selector-btn:link, .form__selector-btn:visited {
+    transform: translateY(0rem); }
+  .form__selector-btn:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 2px 4px 8px grey; }
+  .form__selector-btn::after {
+    transform: translateY(-0.5rem);
+    box-shadow: 2px 4px 8px grey; }
+  .form__selector-btn img {
+    padding: 1.2rem; }
